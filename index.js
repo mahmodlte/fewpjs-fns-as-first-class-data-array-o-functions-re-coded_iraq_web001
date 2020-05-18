@@ -32,10 +32,12 @@ function unleashDog (dogName, dogBreed){
     
     return dogInfo;
 }
-
+let result = [];
 let routine = [wakeDog, leashDog, walkToPark, throwFrisbee,walkHome,unleashDog];
 function exerciseDog (dogName, dogBreed) {
     for (let i = 0; i < routine.length; i++){
+         result = routine[i](dogName, dogBreed);
         
     }
+    return result;
 }
